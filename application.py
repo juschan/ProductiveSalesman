@@ -9,3 +9,4 @@ def hello():
 @app.route("/main")
 def root(name=None):
     return render_template('index.html', name=name)
+
