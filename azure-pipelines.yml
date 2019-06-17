@@ -41,6 +41,6 @@ steps:
   inputs:
     appType: webAppWindows
     RuntimeStack: 'Python|3.6'
-    ConnectionServiceName: $(ConnectedServiceName)
+    ConnectedServiceName: $(ConnectedServiceName)
     WebAppName: $(WebAppName)
     Package: '$(Build.ArtifactStagingDirecotry)/Application$(Build.BuildId).zip'
