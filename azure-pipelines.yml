@@ -42,6 +42,7 @@ steps:
     appType: webApp
     RuntimeStack: 'Python|3.6'
     ConnectedServiceName: $(ConnectedServiceName)
-    WebAppName: $(WebAppName)
+    #WebAppName: $(WebAppName)
+    WebAppName: ProductiveSalesman
     #Package: '$(Build.ArtifactStagingDirectotry)/Application$(Build.BuildId).zip'
     Package: 'D:/a/1/a/Application$(Build.BuildId).zip'
