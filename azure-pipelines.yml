@@ -25,3 +25,22 @@ steps:
 
 #run tests
 - script: python model.py
+
+# zip
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Application$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: # Optional
+
+# deploy to Azure Web App
+- task: AzureRMWebAppDeployment@4
+  inputs:
+    appType: webAppWindows
+    RuntimeStack: 'Python|3.6'
+    ConnectionServiceName: $(ConnectedServiceName)
+    WebAppName: $(WebAppName)
+    Package: '$(Build.ArtifactStagingDirecotry)/Application$(Build.BuildId).zip'
