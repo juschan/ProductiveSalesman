@@ -43,4 +43,5 @@ steps:
     RuntimeStack: 'Python|3.6'
     ConnectedServiceName: $(ConnectedServiceName)
     WebAppName: $(WebAppName)
-    Package: '$(Build.ArtifactStagingDirectotry)/Application$(Build.BuildId).zip'
+    #Package: '$(Build.ArtifactStagingDirectotry)/Application$(Build.BuildId).zip'
+    Package: 'D:/a/1/a/Application$(Build.BuildId).zip'
