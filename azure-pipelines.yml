@@ -39,8 +39,8 @@ steps:
 # deploy to Azure Web App
 - task: AzureRMWebAppDeployment@4
   inputs:
-    appType: webAppWindows
+    appType: webApp
     RuntimeStack: 'Python|3.6'
     ConnectedServiceName: $(ConnectedServiceName)
     WebAppName: $(WebAppName)
-    Package: '$(Build.ArtifactStagingDirecotry)/Application$(Build.BuildId).zip'
+    Package: '$(Build.ArtifactStagingDirectotry)/Application$(Build.BuildId).zip'
